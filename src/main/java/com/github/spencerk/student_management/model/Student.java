@@ -16,6 +16,8 @@ public class Student {
     @ManyToMany
     private List<Course>    courses;
 
+    public Student() {}
+
     public Student(String fname, String lname, String email, String phone, List<Course> courses) {
         this.fname = fname;
         this.lname = lname;
