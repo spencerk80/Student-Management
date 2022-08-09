@@ -3,10 +3,12 @@ package com.github.spencerk.student_management.service;
 import com.github.spencerk.student_management.dao.StudentDao;
 import com.github.spencerk.student_management.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class StudentService {
     @Autowired
     StudentDao  studentDao;
