@@ -3,12 +3,11 @@ package com.github.spencerk.student_management.Controller;
 import com.github.spencerk.student_management.model.Student;
 import com.github.spencerk.student_management.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class StudentController {
     @Autowired
     StudentService studentService;
