@@ -1,9 +1,6 @@
 package com.github.spencerk.student_management.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,6 +13,7 @@ public class Student {
                             lname,
                             email,
                             phone;
+    @ManyToMany
     private List<Course>    courses;
 
     public Student(String fname, String lname, String email, String phone, List<Course> courses) {
