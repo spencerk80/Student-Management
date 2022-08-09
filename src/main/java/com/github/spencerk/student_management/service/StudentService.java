@@ -4,6 +4,7 @@ import com.github.spencerk.student_management.dao.StudentDao;
 import com.github.spencerk.student_management.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
 import java.util.Optional;
 
 public class StudentService {
@@ -19,6 +20,10 @@ public class StudentService {
         Optional<Student> optional = studentDao.findById(id);
         if(optional.isPresent()) return optional.get();
         return null;
+    }
+
+    public List<Student> getAllStudents() {
+        return studentDao.findAll();
     }
 
     public String updateStudent(Student student) {

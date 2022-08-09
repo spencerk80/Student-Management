@@ -4,6 +4,7 @@ import com.github.spencerk.student_management.dao.CourseDao;
 import com.github.spencerk.student_management.model.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
 import java.util.Optional;
 
 public class CourseService {
@@ -13,6 +14,10 @@ public class CourseService {
     public String addCourse(Course course) {
         courseDao.save(course);
         return "Course saved";
+    }
+
+    public List<Course> getAllCourses() {
+        return courseDao.findAll();
     }
 
     public Course getCourse(int id) {
